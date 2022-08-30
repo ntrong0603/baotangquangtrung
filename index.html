@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Virtual tour 360 KDL VĂN HÓA PHƯƠNG NAM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <script src="tour.js"></script>
+
+    <div id="pano" style="width:100%;height:100%;">
+        <noscript>
+            <table style="width:100%;height:100%;">
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <div style="text-align:center;">ERROR:<br /><br />Javascript not activated<br /><br /></div>
+                    </td>
+                </tr>
+            </table>
+        </noscript>
+        <script>
+            embedpano({
+                swf: "tour.swf",
+                xml: "tour.xml",
+                target: "pano",
+                html5: "auto",
+                mobilescale: 1.0,
+                passQueryParameters: true
+            });
+        </script>
+        <nav id="menu-left-top">
+            <a class="btn-drop-menu">
+                <span id="plus">
+                    <img src="images/btnplus.png" alt="">
+                </span>
+                <span>KHU DU LỊCH VĂN HÓA PHƯƠNG NAM</span>
+            </a>
+            <ul class="drop-menu">
+                <li class="box-default active" data-scene="scene_view_flycam_-_t___ng_quan_1">
+                    Tổng quan 1
+                </li>
+                <li class="box-default" data-scene="scene_view_flycam_-_t___ng_quan_2_">
+                    Tổng quan 2
+                </li>
+                <li class="box-default" data-scene="scene_view_flycam_-_gi___a_s__n">
+                    Tổng quan 3
+                </li>
+                <li class="box-default" data-scene="scene_4hadien">
+                    Đền thờ Nam Phương Linh Từ
+                </li>
+                <li class="box-default" data-scene="scene_5trungdien">
+                    Đền thờ Đặng tộc Nam Phương Linh Từ
+                </li>
+                <li class="box-default" data-scene="scene_view_m___t______t_-_b___o_t__ng_1_">
+                    Nhà trưng bày hình ảnh
+                </li>
+				<li class="box-default" data-scene="scene_view_m___t______t_-_b___o_t__ng_2">
+                    Bảo tàng Đặng tộc
+                </li>
+                <li class="box-default" data-scene="scene_view_m___t______t_-_nh___chu__ng">
+                    Nhà Chuông	
+                </li>
+                   <li class="box-default" data-scene="scene_View_m___t______t_-_Nh___Tr___ng">
+                    Nhà Trống
+                </li>
+				<li class="box-default" data-scene="scene_view_m___t______t_-_____n_t____xu__n_">
+                    Đàn tế Xuân
+                </li>
+                <li class="box-default" data-scene="scene_view_m___t______t_-_____n_t____thu">
+                    Đàn tế Thu
+                </li>   <li class="box-default" data-scene="scene_view_m___t______t_-_h__nh_lang_1__">
+                    Khu hành lang
+                </li>
+				<li class="box-default" data-scene="scene_View_m___t______t_nh___c____nam_b_____-_Nh___S__n_">
+                    Khu làng quê Nam Bộ
+                </li>
+                
+               
+            </ul>
+        </nav>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

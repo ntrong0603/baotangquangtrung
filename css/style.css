@@ -1,0 +1,163 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+@media only screen and (min-device-width:800px) {
+    html {
+        overflow: hidden;
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-left-top {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 3;
+}
+
+.menu-left-top .btn-drop-menu,
+.menu-left-top .box-default {
+    display: block;
+    background-color: rgba(0, 96, 156, 0.9);
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-left-top .box-default a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-left-top li.box-default {
+    padding: 5px 25px;
+}
+
+.menu-left-top li.box-default:hover {
+    background-color: rgb(0, 81, 131);
+}
+
+.menu-left-top li.box-default.active {
+    color: rgb(255, 166, 0);
+}
+
+.menu-left-top li.box-default:not(:last-child) {
+    border-bottom: 1px solid rgba(32, 148, 221, 0.5);
+}
+
+.menu-left-top .btn-drop-menu {
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.menu-left-top .btn-drop-menu:hover {
+    border: 1px solid #ffffff;
+}
+
+#plus img {
+    width: 25px;
+    transform-origin: 50% 50%;
+}
+
+.drop-menu {
+    max-height: 0vh;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.menu-left-top.show #plus img {
+    transform: rotate(405deg);
+}
+
+.menu-left-top.show .drop-menu {
+    max-height: 100vh;
+}
+
+.popup {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup iframe {
+    width: 100vw;
+    height: 100vh;
+}
+
+.popup-video {
+    z-index: 10;
+    background-color: black;
+}
+
+#main-video {
+    width: 100vw;
+    height: 100vh;
+}
+
+#language-group {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#language-group li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#language-group li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+}
+
+#language-group li a img {
+    width: 100%;
+    height: 100%;
+}

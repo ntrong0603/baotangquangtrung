@@ -1,0 +1,30 @@
+<krpano>
+    <include url="%SWFPATH%/plugins/showtext.xml" />
+    <include url="%SWFPATH%/plugins/showimage.xml" />
+
+    <textstyle name="hotspottextstyle" font="Arial" fontsize="18" bold="true" padding="5 10" italic="false" textcolor="0xffffff" background="true" backgroundcolor="0x00609c" border="true" bordercolor="0x00609c" alpha="1" blendmode="layer" effect="glow(0x000000,0.5,4,3);dropshadow(4,45,0x000000,4,0.66);" origin="cursor" edge="bottom" textalign="center" xoffset="0" yoffset="-5" noclip="true" showtime="0.1" fadetime="0.25" fadeintime="0.1" />
+    <textstyle name="hotspottextstyle2" font="Arial" fontsize="18" bold="true" padding="5 10" italic="false" textcolor="0xffffff" background="true" backgroundcolor="0x00609c" border="true" bordercolor="0x00609c" alpha="1" blendmode="layer" effect="glow(0x000000,0.5,4,3);dropshadow(4,45,0x000000,4,0.66);" origin="cursor" edge="bottom" textalign="center" xoffset="0" yoffset="-5" noclip="true" showtime="3" fadetime="0.25" fadeintime="0.1" />
+
+    <autorotate enabled="true" waittime="1.0" accel="1.0" speed="0.3" horizon="0.0" tofov="120.0" />
+
+    <!-- Compass -->
+    <!--End Speaker-->
+    <plugin name="soundinterface" url="%SWFPATH%/plugins/soundinterface.swf" alturl="%SWFPATH%/plugins/soundinterface.js" rootpath="%CURRENTXML%" preload="true" keep="true" volume="0.3" />
+    <plugin name="snd" url="soundonoff.png" keep="true" align="rightbottom" x="10" y="70" alpha="0.5" scale="1.0" onover="tween(alpha,1);" onout="tween(alpha,0.5);" crop="0|0|50|50" onclick="switch(soundinterface.mute); switch(crop, 0|0|50|50, 0|50|50|50);" />
+    <!--End Speaker-->
+    <!-- vignetting image -->
+    <action name="set_variable">
+        set(global_heading, 0);
+    </action>
+    <action name="variable_name_scene">
+		<!-- add(nextsceneindex, get(scene[get(xml.scene)].index),1);
+        sub(prevsceneindex, get(scene[get(xml.scene)].index),1);
+        set(layer[skin_btn_prev].onhover, showtext(get(scene[get(prevsceneindex)].title),hotspottextstyle2));
+        set(layer[skin_btn_next].onhover, showtext(get(scene[get(nextsceneindex)].title),hotspottextstyle2)); -->
+    </action>
+    <events name="get_name_scene" keep="true" onloadcomplete="variable_name_scene()"/>
+
+    <!-- update the rotation values -->
+
+    <!-- End compass -->
+</krpano>

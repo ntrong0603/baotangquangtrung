@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine on
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+DirectoryIndex intro index.php index.html
+RewriteRule ^$ index.php&com=intro [L]
+RewriteRule ^([0-9]+)-([a-zA-Z0-9_-]+)$ index.php?com=$2&id=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?com=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)&p=([0-9]+)$ index.php?com=$1&p=$2 [L]
